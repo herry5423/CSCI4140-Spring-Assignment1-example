@@ -1,1 +1,1 @@
-web: python hit-counter.py -m http.server --cgi $PORT
+web: bin/python hit-counter.py -m CGIHTTPServer $PORT
