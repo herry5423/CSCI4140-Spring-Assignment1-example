@@ -14,8 +14,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
     try {
         // FIXME: do not use 'name' for upload (that's the original filename from the user's computer)
         $upload = $s3->upload($bucket, $_FILES['userfile']['name'], fopen($_FILES['userfile']['tmp_name'], 'rb'), 'public-read');
-        echo "check";
-        echo $upload;
 ?>
         <p>Upload <a href="<?=htmlspecialchars($upload->get('ObjectURL'))?>">successful</a> :)</p>
 <?php } catch(Exception $e) { ?>
@@ -25,5 +23,28 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
         <form enctype="multipart/form-data" action="<?=$_SERVER['PHP_SELF']?>" method="POST">
             <input name="userfile" type="file"><input type="submit" value="Upload">
         </form>
+
+ <?php
+ 	try
+	{
+        /*** a file that does not exist ***/
+        $url = 'https://webinstagram.s3.amazonaws.com/image.jpg';
+        $image = file_get_contents($url);
+
+        /*** a new imagick object ***/
+        $img = new Imagick();
+
+        $img -> readImageBlob($image);
+
+
+        echo $img;
+	}
+	catch(Exception $e)
+	{
+        echo $e->getMessage();
+	}
+ ?>
+ 
+
     </body>
 </html>
