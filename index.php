@@ -4,6 +4,7 @@
 </head>
 <body>
 <?php
+require('./vendor/autoload.php');
 
 function thumbnailImage($imagePath)
 {
