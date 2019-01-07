@@ -22,6 +22,7 @@ class ComposerStaticInitbd84176e54a91d891344cc144b173e4c
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Contracts\\' => 18,
             'Symfony\\Component\\Routing\\' => 26,
+            'Symfony\\Component\\OptionsResolver\\' => 34,
             'Symfony\\Component\\HttpKernel\\' => 29,
             'Symfony\\Component\\HttpFoundation\\' => 33,
             'Symfony\\Component\\EventDispatcher\\' => 34,
@@ -37,6 +38,10 @@ class ComposerStaticInitbd84176e54a91d891344cc144b173e4c
         'M' => 
         array (
             'Monolog\\' => 8,
+        ),
+        'C' => 
+        array (
+            'Csanquer\\Silex\\PdoServiceProvider\\' => 34,
         ),
     );
 
@@ -60,6 +65,10 @@ class ComposerStaticInitbd84176e54a91d891344cc144b173e4c
         'Symfony\\Component\\Routing\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/routing',
+        ),
+        'Symfony\\Component\\OptionsResolver\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/options-resolver',
         ),
         'Symfony\\Component\\HttpKernel\\' => 
         array (
@@ -97,6 +106,10 @@ class ComposerStaticInitbd84176e54a91d891344cc144b173e4c
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Csanquer\\Silex\\PdoServiceProvider\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/csanquer/pdo-service-provider/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -112,6 +125,24 @@ class ComposerStaticInitbd84176e54a91d891344cc144b173e4c
             'Pimple' => 
             array (
                 0 => __DIR__ . '/..' . '/pimple/pimple/src',
+            ),
+        ),
+        'G' => 
+        array (
+            'Guzzle\\Tests' => 
+            array (
+                0 => __DIR__ . '/..' . '/guzzle/guzzle/tests',
+            ),
+            'Guzzle' => 
+            array (
+                0 => __DIR__ . '/..' . '/guzzle/guzzle/src',
+            ),
+        ),
+        'A' => 
+        array (
+            'Aws' => 
+            array (
+                0 => __DIR__ . '/..' . '/aws/aws-sdk-php/src',
             ),
         ),
     );
