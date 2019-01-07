@@ -8,11 +8,9 @@
 function thumbnailImage($imagePath)
 {
     echo $imagePath;
-    $imagick = new Imagick($imagePath);
-    $imagick->setbackgroundcolor('rgb(64, 64, 64)');
-    $imagick->thumbnailImage(100, 100, true, true);
-    header("Content-Type: image/jpg");
-    echo $imagick->getImageBlob();
+    $img = new Imagick($imagePath);
+    header('Content-Type: image/'.$img->getImageFormat());
+    echo $img;
 }
 
 thumbnailImage('image.jpg');
