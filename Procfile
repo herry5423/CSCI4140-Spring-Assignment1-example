@@ -1,1 +1,1 @@
-web: python test.py -m CGIHTTPServer $PORT
+web: vendor/bin/heroku-php-nginx
