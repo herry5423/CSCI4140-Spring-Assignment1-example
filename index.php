@@ -29,16 +29,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
         $url = 'https://webinstagram.s3.amazonaws.com/image.jpg';
         echo $url;
         $image = file_get_contents($url);
-
-        /*** a new imagick object ***/
-        $img = new Imagick();
-
-        $img -> readImageBlob($image);
-
-
-        echo $img;
-	
  ?>
+ <img src=$url />
  
 
     </body>
