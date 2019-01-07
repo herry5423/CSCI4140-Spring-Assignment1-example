@@ -25,8 +25,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
         </form>
 
  <?php
- 	try
-	{
         /*** a file that does not exist ***/
         $url = 'https://webinstagram.s3.amazonaws.com/image.jpg';
         echo $url;
@@ -39,11 +37,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
 
 
         echo $img;
-	}
-	catch(Exception $e)
-	{
-        echo $e->getMessage();
-	}
+	
  ?>
  
 
