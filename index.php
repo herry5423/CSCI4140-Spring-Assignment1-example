@@ -10,6 +10,7 @@ require('./vendor/autoload.php');
 function thumbnailImage($imagePath)
 {
     echo $imagePath;
+    echo getcwd();
     $img = new Imagick($imagePath);
     header('Content-Type: image/'.$img->getImageFormat());
     echo $img;
