@@ -3,6 +3,7 @@
 <title>Hello PHP!</title>
 </head>
 <body>
+<img src="image.jpg">
 <?php
 require('./vendor/autoload.php');
 
