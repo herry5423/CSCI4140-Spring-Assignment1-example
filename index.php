@@ -1,20 +1,21 @@
 <html>
 <head>
 <title>Hello PHP!</title>
-<script src="<?php
+</head>
+<body>
+<?php
 
-header('Content-type: image/jpeg');
+function thumbnailImage($imagePath)
+{
+    $imagick = new \Imagick(realpath($imagePath));
+    $imagick->setbackgroundcolor('rgb(64, 64, 64)');
+    $imagick->thumbnailImage(100, 100, true, true);
+    header("Content-Type: image/jpg");
+    echo $imagick->getImageBlob();
+}
 
-$image = new Imagick('image.jpg');
-$echo("hello");
-// If 0 is provided as a width or height parameter,
-// aspect ratio is maintained
-$image->setbackgroundcolor('rgb(64, 64, 64)');
-$image->thumbnailImage(100,100, true,true);
+thumbnailImage('./image.jpg');
 
-
-echo $image;
-
-?>"></script>
-
+?>
+</body>
 </html>
