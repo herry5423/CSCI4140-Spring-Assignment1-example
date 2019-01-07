@@ -9,7 +9,9 @@ $image = new Imagick('image.jpg');
 
 // If 0 is provided as a width or height parameter,
 // aspect ratio is maintained
-$image->thumbnailImage(100, 0);
+$image->setbackgroundcolor('rgb(64, 64, 64)');
+$image->thumbnailImage(100,100, true,true);
+
 
 echo $image;
 
