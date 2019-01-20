@@ -3,7 +3,7 @@
  		$image->newImage(100,100,new ImagickPixel('red'));
  		$image->setImageFormat('png');
  		
-		echo $image;
+		echo base64.base64_encode($image);
         /*** a file that does not exist ***/
         #$url = "https://webinstagram.s3.amazonaws.com/image.jpg";
         #echo $url;

@@ -24,18 +24,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
             <input name="userfile" type="file"><input type="submit" value="Upload">
         </form>
 
-    	 <?php
- 		error_log($image = new Imagick());
- 		$image->newImage(100,100,new ImagickPixel('red'));
- 		$image->setImageFormat('png');
- 		
-		echo "<img src=\"$image\"/>"
-        /*** a file that does not exist ***/
-        #$url = "https://webinstagram.s3.amazonaws.com/image.jpg";
-        #echo $url;
-        #$image = file_get_contents($url);
- 		?>
- 	<!-- <img src="show_image.php" /> -->
+ 	<img src="show_image.php" />
 
     </body>
 </html>
