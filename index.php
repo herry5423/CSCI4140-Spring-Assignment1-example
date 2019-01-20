@@ -2,6 +2,9 @@
 
 <body>
 <?php 
+//report all errors
+error_reporting(E_ALL) ;
+
 $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 #$image = file_get_contents($url);
 
