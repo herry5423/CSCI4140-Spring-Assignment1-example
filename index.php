@@ -30,12 +30,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
  		$image->setImageFormat('png');
  		echo $image;
         /*** a file that does not exist ***/
-        $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
-        echo $url;
-        $image = file_get_contents($url);
+        #$url = "https://webinstagram.s3.amazonaws.com/image.jpg";
+        #echo $url;
+        #$image = file_get_contents($url);
  ?>
- <img src="<?=$url?>">
- 
 
     </body>
 </html>
