@@ -25,7 +25,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
         </form>
 
  <?php
- 		$image = new Imagick();
+ 		error_log($image = new Imagick());
  		#$image->newPseudoImage(100,100,"xc:red");
  		#$image->setImageFormat('jpeg');
 		// echo $image;
