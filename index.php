@@ -16,8 +16,8 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 	$img = new Imagick();
 	$img -> readImageBlob($image);	
 	$img -> resizeImage(320,240,Imagick::FILTER_LANCZOS,1);
-    header("Content-Type: image/jpg");
-    echo $img->getImageBlob();
+    header("Content-Type: image/png");
+    echo $img
 ?>
 
 </body>
