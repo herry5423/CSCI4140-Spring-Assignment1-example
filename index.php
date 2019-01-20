@@ -29,7 +29,7 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 	echo "<pre>"; 
 	system("type convert");
 	// echo exec("/usr/bin/convert $img -resize 50% $imgg");
-	exec("ls -al")
+	exec("ls -al");
 	echo "</pre>"; 
 	
 	// echo '<img src="data:image/jpg;base64,'.base64_encode($imgg->getImageBlob()).'" alt="" />';
