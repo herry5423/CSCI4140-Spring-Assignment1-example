@@ -4,5 +4,5 @@ echo $url;
 $image = file_get_contents($url);
 
 header('Content-type: image/png'); 
-echo '<img src="'.$image.'">';
+echo '<img src="'.$url.'">';
 ?>
