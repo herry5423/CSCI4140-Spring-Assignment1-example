@@ -26,9 +26,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['userfile']) && $_FILES
 
  <?php
  		$image = new Imagick();
- 		$image->newImage(100,100,new ImagickPixel('red'));
- 		$image->setImageFormat('png');
- 		echo $image;
+ 		#$image->newImage(100,100,new ImagickPixel('red'));
+ 		#$image->setImageFormat('png');
+ 		#echo $image;
         /*** a file that does not exist ***/
         #$url = "https://webinstagram.s3.amazonaws.com/image.jpg";
         #echo $url;
