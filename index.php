@@ -23,8 +23,8 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 
 <?php 
 	
-	echo exec("magick convert".$img." -resize 50%".$img);
-	echo '<img src="data:image/jpg;base64,'.base64_encode($img->getImageBlob()).'" alt="" />';
+	echo exec("magick convert".$img." -resize 50%".$imgg);
+	echo '<img src="data:image/jpg;base64,'.base64_encode($imgg->getImageBlob()).'" alt="" />';
 ?>
 
 </body>
