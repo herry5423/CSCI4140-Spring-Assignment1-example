@@ -25,9 +25,11 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 ?>
 
 <?php 
+	$imgg = new Imagick();
 	echo "<pre>"; 
 	system("type convert");
 	echo exec("/usr/bin/convert $img -resize 50% $imgg");
+	echo $imgg;
 	echo "</pre>"; 
 	
 	echo '<img src="data:image/jpg;base64,'.base64_encode($imgg->getImageBlob()).'" alt="" />';
