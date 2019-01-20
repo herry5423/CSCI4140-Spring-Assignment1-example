@@ -11,6 +11,11 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 <p>
 	<img src="<?php echo $url ?>" >
 </p>
+<?php 
+	$image = file_get_contents($url);
+	$img = new Imagick();
+	$img -> readImageBlob($image);
+?>
 
 </body>
 </html>
