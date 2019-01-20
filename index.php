@@ -1,7 +1,7 @@
 <?php 
-$image = new Imagick(); 
-$image->newImage(100, 100, new ImagickPixel('red')); 
-$image->setImageFormat('png'); 
+$url = "https://webinstagram.s3.amazonaws.com/image.jpg";
+echo $url;
+$image = file_get_contents($url);
 
 header('Content-type: image/png'); 
 echo $image; 
