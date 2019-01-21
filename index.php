@@ -29,7 +29,7 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 	$im = new Imagick ();
 	$img -> readImageBlob($image);
 	#echo $img -> writeImage('/app/images/tempimg.jpg');
-	exec("wget https://webinstagram.s3.amazonaws.com/image.jpg | mv image.jpg /app/images/");
+	exec("wget https://webinstagram.s3.amazonaws.com/image.jpg | mv image.jpg /app/images/temp2.jpg");
 	$in = "/app/images/tempimg.jpg";
 	$iout = "/app/images/temp.jpg";
 	unlink($iout);
