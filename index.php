@@ -24,15 +24,21 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
         [0,  5,  0],
         [-1, 0, -1],
     ];
-     
-    $kernel = ImagickKernel::fromMatrix($matrix);
-    $strength = 0.5;
-    $kernel->scale($strength, Imagick::NORMALIZE_KERNEL_VALUE);
-    $kernel->addUnityKernel(1 - $strength);
+    
+    // -------filter------- 
+    // $kernel = ImagickKernel::fromMatrix($matrix);
+    // $strength = 1;
+    // $kernel->scale($strength, Imagick::NORMALIZE_KERNEL_VALUE);
+    // $kernel->addUnityKernel(1 - $strength);
 
-    $img->filter($kernel);
+    // $img->filter($kernel);
 	#$img -> resizeImage(320,240,Imagick::FILTER_LANCZOS,1);
     // header("Content-Type: image/png");
+    $color = rgb(127,127,127);
+    $width = 50;
+    $height = 20;
+    $img->borderImage($color,$width,$height);
+    
     echo '<img src="data:image/jpg;base64,'.base64_encode($img->getImageBlob()).'" alt="" />';
     // echo $img->getImageBlob();
 ?>
