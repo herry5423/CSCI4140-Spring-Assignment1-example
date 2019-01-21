@@ -34,11 +34,11 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
     // $img->filter($kernel);
 	#$img -> resizeImage(320,240,Imagick::FILTER_LANCZOS,1);
     // header("Content-Type: image/png");
-    $color = rgb(127,127,127);
+    $color = 'white';
     $width = 50;
     $height = 20;
     $img->borderImage($color,$width,$height);
-    
+
     echo '<img src="data:image/jpg;base64,'.base64_encode($img->getImageBlob()).'" alt="" />';
     // echo $img->getImageBlob();
 ?>
