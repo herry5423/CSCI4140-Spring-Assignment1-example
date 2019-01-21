@@ -25,15 +25,13 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 ?>
 
 <?php 
-	$imgg = new Imagick();
-	echo "<pre>"; 
-	system("type convert");
-	// echo exec("/usr/bin/convert $img -resize 50% $imgg");
-	echo exec("pwd");
-	echo "</pre>"; 
-	
+	$ii = "https://webinstagram.s3.amazonaws.com/image.jpg";
+	$iout = "temp.jpg";
+	unlink($im);
+	echo exec("/usr/bin/convert $ii -resize 50% $iout");	
 	// echo '<img src="data:image/jpg;base64,'.base64_encode($imgg->getImageBlob()).'" alt="" />';
 ?>
+<div align="center"><img src="<? echo $iout; ?>" /></div>
 
 </body>
 </html>
