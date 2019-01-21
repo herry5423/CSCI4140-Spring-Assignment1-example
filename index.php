@@ -24,9 +24,9 @@ $pdo = new PDO("pgsql:" . sprintf(
     $db["user"],
     $db["pass"],
     ltrim($db["path"], "/")
-echo $pdo;
-
 ));
+
+echo $pdo;
 
 
 	// $image = file_get_contents($url);
