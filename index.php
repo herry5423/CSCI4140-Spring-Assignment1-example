@@ -29,7 +29,7 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 	$im = new Imagick ();
 	$img -> readImageBlob($image);
 	$img -> writeImage('app/img.jpg');
-	$in = "app/img.jpg"
+	$in = "app/img.jpg";
 	$iout = "app/temp.jpg";
 	unlink($iout);
 	echo exec("/usr/bin/convert $in -resize 50% $iout");	
