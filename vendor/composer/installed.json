@@ -214,20 +214,20 @@
     },
     {
         "name": "heroku/heroku-buildpack-php",
-        "version": "v148",
-        "version_normalized": "148.0.0.0",
+        "version": "v149",
+        "version_normalized": "149.0.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/heroku/heroku-buildpack-php.git",
-            "reference": "d331bfb9251d8a091d3a0d29e25ffcdb801577e1"
+            "reference": "ec9ffb83d2101bf4b42e09416a35c48b5dd2557e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/d331bfb9251d8a091d3a0d29e25ffcdb801577e1",
-            "reference": "d331bfb9251d8a091d3a0d29e25ffcdb801577e1",
+            "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/ec9ffb83d2101bf4b42e09416a35c48b5dd2557e",
+            "reference": "ec9ffb83d2101bf4b42e09416a35c48b5dd2557e",
             "shasum": ""
         },
-        "time": "2018-12-20T21:53:40+00:00",
+        "time": "2019-01-14T17:29:14+00:00",
         "bin": [
             "bin/heroku-hhvm-apache2",
             "bin/heroku-hhvm-nginx",
