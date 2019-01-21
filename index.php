@@ -16,7 +16,8 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 </p>
 <?php 
 $db = parse_url(getenv("DATABASE_URL"));
-
+echo "hello";
+echo $db["user"];
 $pdo = new PDO("pgsql:" . sprintf(
     "host=%s;port=%s;user=%s;password=%s;dbname=%s",
     $db["host"],
@@ -26,7 +27,7 @@ $pdo = new PDO("pgsql:" . sprintf(
     ltrim($db["path"], "/")
 ));
 
-echo $pdo;
+
 
 
 	// $image = file_get_contents($url);
