@@ -28,14 +28,14 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 	$image = file_get_contents($url);
 	$im = new Imagick ();
 	$img -> readImageBlob($image);
-	echo $img -> writeImage('/tmp/tempimg.jpg');
-	$in = "/app/images/image.jpg";
+	echo $img -> writeImage('/app/images/tempimg.jpg');
+	$in = "/app/images/tempimg.jpg";
 	$iout = "/app/images/temp.jpg";
 	unlink($iout);
 	echo exec("/usr/bin/convert $in -resize 50% $iout");	
 	// echo '<img src="data:image/jpg;base64,'.base64_encode($imgg->getImageBlob()).'" alt="" />';
 ?>
-<div align="center"><img src="<? echo $iout; ?>" /></div>
+<div align="center"><img src="<? echo $in; ?>" /></div>
 
 </body>
 </html>
