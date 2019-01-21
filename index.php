@@ -28,7 +28,7 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 	$image = file_get_contents($url);
 	$im = new Imagick ();
 	$img -> readImageBlob($image);
-	echo $img -> writeImage('app/img.jpg');
+	echo $img -> writeImage('/app/images/tempimg.jpg');
 	$in = "/app/images/image.jpg";
 	$iout = "/app/images/temp.jpg";
 	unlink($iout);
