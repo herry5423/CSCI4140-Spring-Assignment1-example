@@ -26,6 +26,7 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 
 <?php 
 	$ii = "https://webinstagram.s3.amazonaws.com/image.jpg";
+	echo exec("pwd")
 	$iout = "temp.jpg";
 	unlink($im);
 	echo exec("/usr/bin/convert $ii -resize 50% $iout");	
