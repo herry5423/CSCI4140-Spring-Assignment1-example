@@ -27,7 +27,7 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 <?php 
 	$ii = "https://webinstagram.s3.amazonaws.com/image.jpg";
 	echo exec("pwd");
-	$iout = "/app/temp.jpg";
+	$iout = "public/img/temp.jpg";
 	unlink($im);
 	echo exec("/usr/bin/convert $ii -resize 50% $iout");	
 	// echo '<img src="data:image/jpg;base64,'.base64_encode($imgg->getImageBlob()).'" alt="" />';
