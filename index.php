@@ -37,17 +37,22 @@ $pdo = new PDO("pgsql:" . sprintf(
     ltrim($db["path"], "/")
 ));
 
-try{
-	$db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );//Error Handling
-	$sql ="CREATE table $table(
-	     ID INT( 11 ) AUTO_INCREMENT PRIMARY KEY,
-	     Name VARCHAR( 50 ) NOT NULL, 
-	     Password VARCHAR( 250 ) NOT NULL" ;
-	$db->exec($sql);
-	print("Created $table Table.\n");	
-} catch (PDOException $e) {
-	echo $e->getMessage();
+$sql = "CREATE TABLE MyGuests (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL,
+passwords VARCHAR(30),
+reg_date TIMESTAMP
+)";
+
+if ($pdo->query($sql) === TRUE)
+{
+	echo "Table MyGuests created successfully";
+} else {
+    echo "Error creating table: " . $conn->error;
 }
+
+
+
 
 // $pdo->bind('Name','name');
 // $pdo->bind('Passwords','passwords');
