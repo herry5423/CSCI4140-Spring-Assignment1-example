@@ -14,10 +14,34 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 <p>
 	<img src="<?php echo $url ?>" >
 </p>
+
 <?php 
+// Set handler to overide SESSION  
+session_set_save_handler(  
+array($this, "_open"),  
+array($this, "_close"),  
+array($this, "_read"),  
+array($this, "_write"),  
+array($this, "_destroy"),  
+array($this, "_gc")  
+); 
+
+// Start the session  
+session_start();  
+
+
+
+
+
 $db = parse_url(getenv("DATABASE_URL"));
-echo "hello";
+echo "hello ,db user:";
 echo $db["user"];
+
+$db->query(‘INSERT INTO mytable (Name, Passwords) VALUES (:name, :passwords)’);
+$db->bind('Name','name');
+$db->bind('Passwords','passwords');
+$db->execute();
+
 $pdo = new PDO("pgsql:" . sprintf(
     "host=%s;port=%s;user=%s;password=%s;dbname=%s",
     $db["host"],
