@@ -37,10 +37,10 @@ $pdo = new PDO("pgsql:" . sprintf(
     ltrim($db["path"], "/")
 ));
 
-$pdo->query(‘INSERT INTO mytable (Name, Passwords) VALUES (:name, :passwords)’);
-$pdo->bind('Name','name');
-$pdo->bind('Passwords','passwords');
-$pdo->execute();
+// $pdo->query(‘INSERT INTO mytable (Name, Passwords) VALUES (:name, :passwords)’);
+// $pdo->bind('Name','name');
+// $pdo->bind('Passwords','passwords');
+// $pdo->execute();
 
 
 
