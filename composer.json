@@ -6,7 +6,8 @@
     "symfony/twig-bridge": "^3",
     "csanquer/pdo-service-provider": "~1.1dev",
     "aws/aws-sdk-php": "~2.6",
-    "ext-imagick": "*"
+    "ext-imagick": "*",
+    "ext-memcached": "*"
   },
   "require-dev": {
     "heroku/heroku-buildpack-php": "*"
