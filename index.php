@@ -37,11 +37,6 @@ $db = parse_url(getenv("DATABASE_URL"));
 echo "hello ,db user:";
 echo $db["user"];
 
-$db->query(‘INSERT INTO mytable (Name, Passwords) VALUES (:name, :passwords)’);
-$db->bind('Name','name');
-$db->bind('Passwords','passwords');
-$db->execute();
-
 $pdo = new PDO("pgsql:" . sprintf(
     "host=%s;port=%s;user=%s;password=%s;dbname=%s",
     $db["host"],
@@ -50,6 +45,13 @@ $pdo = new PDO("pgsql:" . sprintf(
     $db["pass"],
     ltrim($db["path"], "/")
 ));
+
+$pdo->query(‘INSERT INTO mytable (Name, Passwords) VALUES (:name, :passwords)’);
+$pdo->bind('Name','name');
+$pdo->bind('Passwords','passwords');
+$pdo->execute();
+
+
 
 
 
