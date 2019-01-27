@@ -37,7 +37,18 @@ $pdo = new PDO("pgsql:" . sprintf(
     ltrim($db["path"], "/")
 ));
 
-// $pdo->query(‘INSERT INTO mytable (Name, Passwords) VALUES (:name, :passwords)’);
+try{
+	$db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );//Error Handling
+	$sql ="CREATE table $table(
+	     ID INT( 11 ) AUTO_INCREMENT PRIMARY KEY,
+	     Name VARCHAR( 50 ) NOT NULL, 
+	     Password VARCHAR( 250 ) NOT NULL" ;
+	$db->exec($sql);
+	print("Created $table Table.\n");	
+} catch (PDOException $e) {
+	echo $e->getMessage();
+}
+
 // $pdo->bind('Name','name');
 // $pdo->bind('Passwords','passwords');
 // $pdo->execute();
