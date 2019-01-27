@@ -2,8 +2,10 @@
 
 <body>
 <?php 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 //report all errors
-error_reporting(E_ALL) ;
 
 $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 #$image = file_get_contents($url);
@@ -48,7 +50,7 @@ if ($pdo->query($sql) === TRUE)
 {
 	echo "Table MyGuests created successfully";
 } else {
-    echo "Error creating table: " . $conn->error;
+    echo "Error creating table: ";
 }
 
 
