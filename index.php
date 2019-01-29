@@ -22,10 +22,6 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 // Start the session  
 // session_start();  
 
-
-
-
-
 $db = parse_url(getenv("DATABASE_URL"));
 echo "hello ,db user:";
 echo $db["user"];
@@ -38,15 +34,9 @@ $pdo = new PDO("pgsql:" . sprintf(
     $db["pass"],
     ltrim($db["path"], "/")
 ));
+$sql = "INSERT INTO MyUsers (id,name,passwords) VALUES (3,'John','zxc123');";
 
-$sql = "CREATE TABLE MyGuests (
-id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-name VARCHAR(30) NOT NULL,
-passwords VARCHAR(30),
-reg_date TIMESTAMP
-)";
-
-if ($pdo->query($sql) === TRUE)
+if ($pdo->query($sql) == TRUE)
 {
 	echo "Table MyGuests created successfully";
 } else {
