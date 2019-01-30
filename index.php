@@ -20,7 +20,7 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 <?php 
 
 $cookie_value = "webinstagram";
-setcookie("webinstagram", $cookie_value, time()+3600, "./", "https://webinstagram.herokuapp.com", 1, 1);
+setcookie("webinstagram", $cookie_value, time()+3600, "./", "herokuapp.com", 1, 1);
 if (isset($_COOKIE['cookie']))
 {
 echo $_COOKIE["webinstagram"];
