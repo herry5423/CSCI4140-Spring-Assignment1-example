@@ -19,29 +19,34 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 
 <?php 
 
-// Start the session  
-// session_start();  
+$cookie_value = "webinstagram";
+setcookie("webinstagram", $cookie_value, time()+3600, "./", "https://webinstagram.herokuapp.com", 1, 1);
+if (isset($_COOKIE['cookie']))
+echo $_COOKIE["webinstagram"];
 
-$db = parse_url(getenv("DATABASE_URL"));
-echo "hello ,db user:";
-echo $db["user"];
 
-$pdo = new PDO("pgsql:" . sprintf(
-    "host=%s;port=%s;user=%s;password=%s;dbname=%s",
-    $db["host"],
-    $db["port"],
-    $db["user"],
-    $db["pass"],
-    ltrim($db["path"], "/")
-));
-$sql = "INSERT INTO MyUsers (id,name,passwords) VALUES (3,'John','zxc123');";
+// $db = parse_url(getenv("DATABASE_URL"));
+// echo "hello ,db user:";
+// echo $db["user"];
 
-if ($pdo->query($sql) == TRUE)
-{
-	echo "Table MyGuests created successfully";
-} else {
-    echo "Error creating table: ";
-}
+// $pdo = new PDO("pgsql:" . sprintf(
+//     "host=%s;port=%s;user=%s;password=%s;dbname=%s",
+//     $db["host"],
+//     $db["port"],
+//     $db["user"],
+//     $db["pass"],
+//     ltrim($db["path"], "/")
+// ));
+
+// // Just an example, you can also apply it on upload images or other infos
+// $sql = "INSERT INTO MyUsers (id,name,passwords) VALUES (3,'John','zxc123');";
+
+// if ($pdo->query($sql) == TRUE)
+// {
+// 	echo "Table MyGuests created successfully";
+// } else {
+//     echo "Error creating table: ";
+// }
 
 
 
