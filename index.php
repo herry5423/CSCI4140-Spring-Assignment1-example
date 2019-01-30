@@ -19,13 +19,8 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 
 <?php 
 
-setcookie('flavor','chocolate chip', time()+60*60*24*7);
-if (isset($_COOKIE['cookie']))
-{
-echo $_COOKIE["flavor"];
-}
-else 
-{echo "asd";}
+echo setcookie('flavor','chocolate chip', time()+60*60*24*7);
+
 
 // $db = parse_url(getenv("DATABASE_URL"));
 // echo "hello ,db user:";
