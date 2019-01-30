@@ -19,8 +19,11 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 
 <?php 
 
-echo setcookie('flavor','chocolate chip', time()+60*60*24*7);
-echo $_COOKIE['flavor'];
+$number_of_days = 30;
+$date_of_expiry = time() + 60 * 60 * 24 * $number_of_days;
+
+echo setcookie( "userlogin", "anonymous", $date_of_expiry, "/" );
+echo "Welcome back to the site" . $_COOKIE['userlogin'];
 
 // $db = parse_url(getenv("DATABASE_URL"));
 // echo "hello ,db user:";
