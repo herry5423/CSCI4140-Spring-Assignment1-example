@@ -19,9 +19,8 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 
 <?php 
 
-$number_of_days = 30;
-$date_of_expiry = time() + 60 * 60 * 24 * $number_of_days;
-
+$date_of_expiry = time() - 60 ;
+setcookie( "userlogin", "anonymous", $date_of_expiry, "/");
 // setcookie( "userlogin", "anonymous", $date_of_expiry, "/" );
 echo "Welcome back to the site: " . $_COOKIE["userlogin"] ;
 
