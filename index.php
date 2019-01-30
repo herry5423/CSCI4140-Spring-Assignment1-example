@@ -19,11 +19,10 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 
 <?php 
 
-$cookie_value = "webinstagram";
-setcookie("webinstagram", $cookie_value, time()+3600, "./", "herokuapp.com", 1, 1);
+setcookie('flavor','chocolate chip', time()+60*60*24*7);
 if (isset($_COOKIE['cookie']))
 {
-echo $_COOKIE["webinstagram"];
+echo $_COOKIE["flavor"];
 }
 else 
 {echo "NOthing";}
