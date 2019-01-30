@@ -22,8 +22,11 @@ $url = "https://webinstagram.s3.amazonaws.com/image.jpg";
 $cookie_value = "webinstagram";
 setcookie("webinstagram", $cookie_value, time()+3600, "./", "https://webinstagram.herokuapp.com", 1, 1);
 if (isset($_COOKIE['cookie']))
+{
 echo $_COOKIE["webinstagram"];
-
+}
+else 
+{echo "NOthing";}
 
 // $db = parse_url(getenv("DATABASE_URL"));
 // echo "hello ,db user:";
