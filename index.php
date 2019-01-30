@@ -25,7 +25,7 @@ if (isset($_COOKIE['cookie']))
 echo $_COOKIE["flavor"];
 }
 else 
-{echo "NOthing";}
+{echo "asd";}
 
 // $db = parse_url(getenv("DATABASE_URL"));
 // echo "hello ,db user:";
